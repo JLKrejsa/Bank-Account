@@ -6,35 +6,22 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    class Account
+    abstract class Account
     {
         //fields
-        //View Client Information - user profile
-        //View Account Balance
-        //Checking Account Balance
-        //Reserve Account Balance
-        //Savings Account Balance
-        //Deposit Funds
-        //Withdraw Funds
-        //Exit
-
-        private string clientName;
-        //float checkingBalance;
-        //float reserveBalance;
-        //float savingsBalance;
-        
+         private string clientName;
 
         //properties
-        public string FirstName
+        public string ClientName
         {
             get { return this.clientName; }
             set { this.clientName = "Gillian Kate"; }
         }
 
-
+        public abstract void Deposit();
       
-
-
+        public abstract void Withdraw();
+           
         
 
 
@@ -42,5 +29,7 @@ namespace Bank_Account
 
 
 
-        }
+
+
+}
 }
