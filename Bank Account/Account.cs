@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    abstract class Account
+    class Account
     {
         //fields
-         private string clientName;
+        private string clientName;
+        private string summary;
+
+        private float deposit;
+        private float withdraw;
 
         //properties
         public string ClientName
@@ -18,9 +22,32 @@ namespace Bank_Account
             set { this.clientName = "Gillian Kate"; }
         }
 
-        public abstract void Deposit();
+        public float Deposit
+        {
+            get { return this.deposit; }
+            set { this.deposit = value; }
+        }
+
+        public float Withdraw
+        {
+            get { return this.withdraw; }
+            set { this.withdraw = value; }
+        }
+
+        public string Summary
+        {
+            get { return this.summary; }
+            set { this.summary = value; }
+        }
+
+        //methods
+
+        public void Deposit();
       
-        public abstract void Withdraw();
+        public void Withdraw();
+
+        public void Summary();
+
            
         
 
