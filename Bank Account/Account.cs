@@ -12,8 +12,12 @@ namespace Bank_Account
         private string clientName;
         private string summary;
 
-        private float deposit;
-        private float withdraw;
+        private float depositAmount;
+        private float withdrawAmount;
+        private float beginBalance;
+        private float currentBalance;
+
+        
 
         //properties
         public string ClientName
@@ -24,14 +28,14 @@ namespace Bank_Account
 
         public float Deposit
         {
-            get { return this.deposit; }
-            set { this.deposit = value; }
+            get { return this.depositAmount; }
+            set { this.depositAmount = value; }
         }
 
         public float Withdraw
         {
-            get { return this.withdraw; }
-            set { this.withdraw = value; }
+            get { return this.withdrawAmount; }
+            set { this.withdrawAmount = value; }
         }
 
         public string Summary
@@ -40,13 +44,68 @@ namespace Bank_Account
             set { this.summary = value; }
         }
 
+
+        public float BeginBalance
+        {
+            get { return this.beginBalance; }
+            set { this.beginBalance = 0; }
+        }
+
+        public float CurrentBalance
+        {
+            get { return this.currentBalance; }
+            set { this.currentBalance = value; }
+        }
+
+
+        public Account(string clientName, string summary)
+        {
+            this.clientName = clientName;
+            this.summary = summary;
+        }
+
+        //constructor
+        public Account()
+        {
+
+        }
+
         //methods
+        public void AccountInfo()
+        {
+            Console.WriteLine(clientName);
+            Console.WriteLine(currentBalance);
+        }
 
-        public void Deposit();
-      
-        public void Withdraw();
+        
 
-        public void Summary();
+        public void DepositMoney()
+
+        {
+            Console.WriteLine("Enter amount for deposit: ");
+            float depositValue = float.Parse(Console.ReadLine());
+            this.currentBalance += depositValue;
+
+        }
+        
+        
+        public void WithdrawMoney()
+        {
+            Console.WriteLine("Enter amount to Withdraw: ");
+            float withdrawValue = float.Parse(Console.ReadLine());
+            this.currentBalance += withdrawValue;
+        }    
+
+        //float currentBalance = float.Parse(Console.ReadLine());
+        public void SummaryView()
+        {
+            Console.WriteLine("Name" + ClientName);
+            Console.WriteLine("Balance" + CurrentBalance);
+        }
+        public void Balance()
+        {
+            Console.WriteLine();
+        }
 
            
         

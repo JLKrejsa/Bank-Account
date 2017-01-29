@@ -8,22 +8,42 @@ namespace Bank_Account
 {
     class Reserve:Account
     {
-        private string accountNumber;
-        private string accountType;
+        private string accountNumberR;
+        private string accountTypeR;
 
 
 
         //properties
         public string AccountNumber
         {
-            get { return this.accountNumber; }
-            set { this.accountNumber = "020906002"; }
+            get { return this.accountNumberR; }
+            set { this.accountNumberR = "020906002"; }
         }
 
         public string AccountType
         {
-            get { return this.accountType; }
-            set { this.accountNumber = "Reserve"; }
+            get { return this.accountTypeR; }
+            set { this.accountNumberR = "Reserve"; }
+        }
+
+        //constructors()
+
+        public Reserve()
+        {
+
+        }
+
+        public Reserve(string clientName, float beginBalance)
+        {
+            this.ClientName = "Gillian Kate";
+            this.BeginBalance = 0;
+
+        }
+
+        public Reserve(string accountNumber, string accountType)
+        {
+            this.accountNumberR = "020906000";
+            this.accountTypeR = "Checking";
         }
 
     }
