@@ -13,12 +13,18 @@ namespace Bank_Account
             Console.WriteLine("Welcome to the Bank of WCCI.");
             Console.WriteLine("How may we help you today?");
 
-            Account AccountInfo = new Account();
-            Account DepositMoney = new Account();
-            Account WithdrawMoney = new Account();
-            Checking CheckBalance = new Checking();
+
             while (true)
             {
+                Account AccountInfo = new Account();
+                Account DepositMoney = new Account();
+                Account WithdrawMoney = new Account();
+                Checking CheckBalance = new Checking();
+                Savings SaveBalance = new Savings();
+                Reserve ReserveBalance = new Reserve();
+
+                //menu that works
+
                 List<string> mainMenu = new List<string>();
                 mainMenu.Add("\n");
                 mainMenu.Add("Menu");
@@ -32,9 +38,9 @@ namespace Bank_Account
 
                 mainMenu.ForEach(Console.WriteLine);
 
-                int menuResponse = int.Parse(Console.ReadLine());
+                int menuChoice = int.Parse(Console.ReadLine());
 
-                switch (menuResponse)
+                switch (menuChoice)
                 {
                     case 1:
                         Console.WriteLine(AccountInfo);
@@ -43,14 +49,15 @@ namespace Bank_Account
                     //checking acct balance
                     case 2:
                         Console.WriteLine(CheckBalance);
+                        
                         break;
 
                     case 3:
-                        Console.WriteLine();
+                        Console.WriteLine(ReserveBalance);
                         break;
 
                     case 4:
-                        Console.WriteLine();
+                        Console.WriteLine(SaveBalance);
                         break;
 
                     //deposit
@@ -67,6 +74,9 @@ namespace Bank_Account
                         Environment.Exit(0);
                         break;
 
+                    default:
+                        break;
+                    
                 }
 
 

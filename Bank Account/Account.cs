@@ -71,15 +71,15 @@ namespace Bank_Account
         }
 
         //methods
-        public void AccountInfo()
+        public void AccountInfo(string clientName)
         {
-            Console.WriteLine(clientName);
-            Console.WriteLine(currentBalance);
+            Console.WriteLine("Gillian Kate");
+            Console.WriteLine("$0");
         }
 
         
 
-        public void DepositMoney()
+        public void DepositMoney(float depositAmount)
 
         {
             Console.WriteLine("Enter amount for deposit: ");
@@ -104,7 +104,7 @@ namespace Bank_Account
         }
         public void Balance()
         {
-            Console.WriteLine();
+            Console.WriteLine(currentBalance);
         }
 
            

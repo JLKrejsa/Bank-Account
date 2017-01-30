@@ -45,9 +45,11 @@ namespace Bank_Account
             this.accountTypeS = "Checking";
         }
 
+        public void SaveBalance()
+        {
+            Console.WriteLine("Savings Balance: " + CurrentBalance);
 
+        }
 
-
-
-    }
+        }
 }

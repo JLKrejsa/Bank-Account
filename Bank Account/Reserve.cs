@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    class Reserve:Account
+    class Reserve : Account
     {
         private string accountNumberR;
         private string accountTypeR;
@@ -46,5 +46,14 @@ namespace Bank_Account
             this.accountTypeR = "Checking";
         }
 
+        public void ReserveBalance()
+        {
+            Console.WriteLine("Reserve Balance: " + CurrentBalance);
+        }
+
+
+
+        //end class section
     }
-}
+    }
+
